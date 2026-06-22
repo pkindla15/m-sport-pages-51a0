@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>米兰体育 · 日常查询与延伸阅读</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f2f2f0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #2e2e2c;
+      padding: 2rem 1.2rem;
+    }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    /* hero 简洁卡片头 */
+    .hero-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2.8rem 2.4rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid rgba(0,0,0,0.04);
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s ease;
+    }
+    .hero-card h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #1f1f1d;
+      margin-bottom: 0.3rem;
+    }
+    .hero-card .sub {
+      font-size: 1.1rem;
+      color: #6b6b67;
+      border-left: 3px solid #b0a89c;
+      padding-left: 1.2rem;
+      margin: 0.6rem 0 1.4rem 0;
+    }
+    /* 段落卡片 */
+    .content-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+      border: 1px solid #eae8e3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      margin-bottom: 1.6rem;
+    }
+    .content-card h2 {
+      font-size: 1.5rem;
+      font-weight: 480;
+      color: #262522;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #edece7;
+      padding-bottom: 0.5rem;
+    }
+    .content-card p {
+      margin-bottom: 1.1rem;
+      color: #3a3a37;
+    }
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+    .inset-quote {
+      background: #f6f5f1;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.4rem 0;
+      border-left: 5px solid #b7aa99;
+      font-style: normal;
+      color: #3d3c38;
+      font-size: 1.05rem;
+    }
+    .inset-quote::before {
+      content: "📌 ";
+      font-style: normal;
+    }
+    .link-sentence {
+      background: #faf9f7;
+      border-radius: 20px;
+      padding: 1.2rem 1.6rem;
+      border: 1px solid #dedbd4;
+      margin: 1.6rem 0 0.4rem 0;
+      color: #33322f;
+    }
+    .link-sentence a {
+      color: #3a5a6f;
+      text-decoration: none;
+      font-weight: 480;
+      border-bottom: 1px dotted #9dadb8;
+      transition: border-bottom 0.15s;
+    }
+    .link-sentence a:hover {
+      border-bottom: 1px solid #3a5a6f;
+    }
+    .faq-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed #e1ded7;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 480;
+      color: #2d2d2a;
+    }
+    .faq-a {
+      color: #5a5954;
+      margin-top: 0.2rem;
+    }
+    .footer-note {
+      text-align: center;
+      color: #7e7d77;
+      font-size: 0.9rem;
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #dcdad3;
+    }
+    @media (max-width: 540px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .hero-card {
+        padding: 1.8rem 1.4rem;
+      }
+      .hero-card h1 {
+        font-size: 1.9rem;
+      }
+      .content-card {
+        padding: 1.5rem 1.4rem;
+      }
+      .content-card h2 {
+        font-size: 1.3rem;
+      }
+      .inset-quote {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <!-- hero 卡片 -->
+  <div class="hero-card">
+    <h1>米兰体育 · 日常参照笔记</h1>
+    <div class="sub">从一次查询开始，慢慢深入</div>
+    <p style="color:#4f4e49; margin-top: 0.2rem;">
+      很多时候我们只是想知道某个联赛的赛程、某个球队的近期状态，或者单纯想核对一下比赛时间。打开一个熟悉的地方，翻一翻，心里就有数了。
+    </p>
+  </div>
+
+  <!-- 正文第一段：日常查询的角度 -->
+  <div class="content-card">
+    <h2>查询，是每次阅读的起点</h2>
+    <p>下午四点，朋友发来消息：“今晚那场球几点？” 我习惯性地点开常用的体育信息页面，扫一眼列表，截个图发过去。整个过程不到二十秒。日常的查询往往就是这样——不需要长篇分析，只想要一个干净、及时的答案。</p>
+    <p>无论你是想查五大联赛的积分榜，还是翻一翻即将开始的杯赛对阵，一个能快速定位信息的地方会省下很多时间。页面布局是否清爽、数据是否更新及时，往往比花哨的动效更重要。</p>
+    <div class="inset-quote">
+      顺手收藏一个信得过的来源，下次需要时就不用从零开始搜索了。
+    </div>
+    <p>用久了，甚至会记住那个页面的结构：左边是赛程，中间是滚动新闻，角落里放着实时比分。习惯本身也是一种效率。</p>
+  </div>
+
+  <!-- 第二段：对照与对比 -->
+  <div class="content-card">
+    <h2>对照着看，信息才立体</h2>
+    <p>只看一个联赛的数据有时会缺少参照。比如这个赛季某支球队主场强势，但客场成绩如何？如果能把不同赛事、不同赛季的数据摆在一起对照，很多印象就能被证实或推翻。</p>
+    <p>这就是延伸阅读的用处。从一个球员的进球数出发，可能会翻到他的出场时间、助攻率、甚至伤病记录。从一场比赛的结果，可以追溯到两队近五次的交锋历史。好的信息页面会自然地提供这些关联入口，不需要你重新输入关键词去搜索。</p>
+    <p>很多时候，我们不是在做专业分析，只是在满足一点好奇心。但正是这些零散的对照，让原本模糊的认识慢慢清晰起来。</p>
+  </div>
+
+  <!-- 第三段：延伸阅读与引用提示 -->
+  <div class="content-card">
+    <h2>从一个句子，走到更多句子</h2>
+    <p>前几天我在读一篇关于战术演变的长文，里面提到某个赛季的阵型变化。为了理解那个背景，我打开了 <a href="https://m-sport-milan.com" style="color:#3a5a6f; text-decoration: none; border-bottom: 1px dotted #9dadb8;">米兰体育</a> 的对应专题页面，一边读一边对照赛程和阵容列表。那种感觉就像是在一张地图上找到了自己所在的位置，然后顺着路标慢慢往前走。</p>
+    <p>延伸阅读不是漫无目的的点击，而是有线索地深入。一篇文章里的引用、一个数据背后的注释，都可能指向另一个值得花时间的内容。如果能在一个页面上完成从“查询”到“阅读”再到“延伸”的流畅过渡，体验会非常自然。</p>
+    <div class="inset-quote">
+      好的引文会让你想：等一下，这句话的背景是什么？然后你就去翻下一页了。
+    </div>
+    <p>对我而言，一个体育信息页面是否好用，很大程度上取决于它是否允许我“顺着读下去”——而不是每次都要跳回首页重新开始。</p>
+  </div>
+
+  <!-- FAQ 摘要卡片（简化） -->
+  <div class="content-card">
+    <h2>一些常被问到的事情</h2>
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="faq-q">⚽ 哪里能快速看到当天所有赛程？</div>
+        <div class="faq-a">多数体育信息页面会在首页或赛程板块集中列出当日比赛，按时间排序。部分平台还提供筛选联赛的功能。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">📊 数据更新频率大概是多少？</div>
+        <div class="faq-a">正规的体育数据源通常在比赛进行时实时更新，赛后几分钟内完成数据校对。不过不同页面之间可能存在几分钟延迟。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">🔗 想延伸阅读某个球队的历史交手记录，可以直接找到吗？</div>
+        <div class="faq-a">大部分页面在球队资料或比赛详情页里会包含“历史交锋”标签，点击即可查看往期对阵数据。如果没有，可以尝试搜索球队名称＋“vs”。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 内嵌链接的自然句子（独立卡片） -->
+  <div class="content-card" style="background: #faf9f5;">
+    <p style="margin-bottom: 0.6rem;">如果你平时也喜欢在查询之余顺便翻翻专栏、读点背景分析，可以试试把 <a href="https://m-sport-milan.com" style="color:#3a5a6f; text-decoration: none; border-bottom: 1px dotted #9dadb8;">米兰体育</a> 放进书签夹。它适合那种「先查个比分，结果看了半小时延伸内容」的夜晚。</p>
+    <p style="margin-bottom: 0; color: #5f5e59;">不用刻意记住什么，翻着翻着，自然就知道得更多了。</p>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    —— 日常查询 · 对照 · 延伸 ——
+  </div>
+</div>
+</body>
+</html>
