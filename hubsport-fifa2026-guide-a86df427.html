@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯观赛指南 · 信息整理页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 760px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 36px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+            padding: 2.8rem 2.2rem;
+            transition: padding 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 2rem 1.2rem;
+                border-radius: 24px;
+            }
+        }
+
+        /* hero 区 */
+        .hero-title {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: #475569;
+            border-left: 4px solid #94a3b8;
+            padding-left: 1rem;
+            margin: 1rem 0 2.2rem 0;
+        }
+
+        .divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #e2e8f0 40%, transparent);
+            margin: 2rem 0 2.2rem 0;
+        }
+
+        /* 标题层级 */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2rem 0 0.8rem 0;
+            color: #0f172a;
+            letter-spacing: -0.01em;
+            display: inline-block;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.2rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin: 1.4rem 0 0.5rem 0;
+            color: #1e293b;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.6rem 0 0.8rem 0;
+        }
+
+        @media (max-width: 560px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+
+        .card {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 1.4rem 1.2rem 1.2rem 1.2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            line-height: 1;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h4 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: #0f172a;
+        }
+
+        .card p {
+            font-size: 0.92rem;
+            color: #334155;
+            margin-bottom: 0;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .card ul li {
+            font-size: 0.9rem;
+            padding: 0.2rem 0;
+            color: #475569;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .card ul li::before {
+            content: "·";
+            font-weight: 700;
+            margin-right: 0.5rem;
+            color: #94a3b8;
+        }
+
+        /* 人群区块 (简洁列表) */
+        .audience-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1rem;
+            margin: 0.8rem 0 1rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .audience-list li {
+            background: #f1f5f9;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* 自然链接段落 */
+        .link-sentence {
+            background: #f1f5f9;
+            padding: 1.4rem 1.6rem;
+            border-radius: 20px;
+            margin: 1.8rem 0 1rem 0;
+            font-size: 1rem;
+            border-left: 5px solid #94a3b8;
+        }
+
+        .link-sentence a {
+            color: #1e40af;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd5e1;
+            transition: border-color 0.2s;
+        }
+
+        .link-sentence a:hover {
+            border-bottom-color: #1e40af;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            margin: 1.2rem 0;
+            padding: 0.6rem 0 0.8rem 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .faq-a {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .fine-print {
+            margin-top: 2.5rem;
+            font-size: 0.82rem;
+            color: #94a3b8;
+            text-align: center;
+            border-top: 1px solid #eef2f6;
+            padding-top: 1.8rem;
+        }
+
+        .fine-print a {
+            color: #64748b;
+            text-decoration: none;
+            border-bottom: 1px dotted #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero -->
+    <div class="hero-title">世界杯·观赛与信息</div>
+    <div class="hero-sub">围绕赛事主题整理的简明卡片页 —— 用途、人群与实用提示</div>
+
+    <!-- 导语段落 -->
+    <p>
+        每届世界杯都会聚集来自不同时区的目光，人们不仅关注比赛结果，也关心观赛方式、赛程节奏以及如何更顺畅地跟进最新动态。这个页面把分散的信息点整理成几个模块，方便快速了解与探索。
+    </p>
+
+    <hr class="divider">
+
+    <!-- 用途卡片：主视觉概念 + 具体功能 -->
+    <h2>🏟️ 用途卡片 · 从信息到体验</h2>
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-icon">📋</span>
+            <h4>赛程与提醒</h4>
+            <p>小组赛、淘汰赛、决赛时间一目了然。可结合日历工具订阅，避免错过关键场次。部分平台支持推送通知。</p>
+        </div>
+        <div class="card">
+            <span class="card-icon">🌐</span>
+            <h4>多语言资讯</h4>
+            <p>赛事报道、球队阵容、裁判信息等经常以多种语言发布。选择自己熟悉的语言频道，能更快理解战术与分析。</p>
+        </div>
+        <div class="card">
+            <span class="card-icon">📺</span>
+            <h4>观赛方式参考</h4>
+            <p>不同地区的转播权机构有所差异。提前了解当地持权平台、网络直播或公共观赛点，能减少临时寻找的麻烦。</p>
+        </div>
+        <div class="card">
+            <span class="card-icon">🏆</span>
+            <h4>历史与记录</h4>
+            <p>历届冠军、最佳射手、经典比赛回顾。对于新球迷来说，这些背景能帮助更快融入世界杯的讨论氛围。</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 适合人群 -->
+    <h2>🧑‍🤝‍🧑 适合人群</h2>
+    <p>以下人群可能会从整理后的信息卡片中获益，内容设计尽量兼顾不同熟悉程度的使用者：</p>
+    <ul class="audience-list">
+        <li>偶尔看球的 casual 观众</li>
+        <li>深度球迷与数据控</li>
+        <li>想陪同家人朋友一起观赛的人</li>
+        <li>需要快速查到赛程的上班族</li>
+        <li>刚接触足球、想了解世界杯的新人</li>
+        <li>在海外、需要跨时区观赛的人</li>
+    </ul>
+    <p style="margin-top: 0.6rem; font-size: 0.95rem; color: #475569;">
+        每个模块都尽量使用平实的描述，不预设你已经有大量背景知识。
+    </p>
+
+    <hr class="divider">
+
+    <!-- 自然链接段落（嵌入 a 标签） -->
+    <h2>🔗 相关链接</h2>
+    <p>
+        如果你希望在一个持续更新的信息页上跟进世界杯的进展，<a href="https://hubsport-fifa2026.com">世界杯</a>这个站点提供了较完整的赛事信息聚合，包括球队动态、分组情况以及实用工具链接。页面风格偏向简洁，适合直接浏览或作为参考起点。
+    </p>
+
+    <div class="link-sentence">
+        ⚽ 顺便提一句：在寻找官方或授权信息时，<a href="https://hubsport-fifa2026.com">世界杯</a>这个地址被不少人当作快捷入口，因为它集中了多个实用模块，省去了在多个页面之间跳转的麻烦。
+    </div>
+
+    <hr class="divider">
+
+    <!-- FAQ 摘要 -->
+    <h2>❓ 常见问题摘要</h2>
+    <div class="faq-item">
+        <div class="faq-q">小组赛阶段一般持续多久？</div>
+        <div class="faq-a">通常为 12 天左右，32 支球队分成 8 个小组进行循环赛。具体日期以当届赛程公布为准。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">如何快速确认自己的地区是否有转播？</div>
+        <div class="faq-a">可以留意国际足联官网公布的持权转播商列表，或使用整合了转播信息的页面进行筛选。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">页面里的信息更新频率如何？</div>
+        <div class="faq-a">本页仅作整理参考，不承诺实时更新。建议搭配官方渠道或可靠体育媒体获取最新变动。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">为什么推荐从世界杯主题页开始看？</div>
+        <div class="faq-a">因为它把赛程、队伍、新闻入口放在一起，减少了四处搜集的步骤，对快速入门或日常跟进都比较友好。</div>
+    </div>
+
+    <!-- 底部提示 -->
+    <div class="fine-print">
+        <span>信息卡片 · 极简整理 · 没有诱导链接</span><br>
+        内容基于公开赛事资料整理，非官方页面。<br>
+        如想直接访问信息聚合页，可点击上文中的 <a href="https://hubsport-fifa2026.com">世界杯</a> 链接。
+    </div>
+
+</div>
+</body>
+</html>
